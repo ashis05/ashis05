@@ -50,13 +50,13 @@ I am a passionate technology enthusiast dedicated to building functional web app
 
 ### 📊 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ashis05&show_icons=true&theme=radical&count_private=true)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ashis05&show_icons=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ashis05&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ashis05&layout=compact)
 
 ### 🏆 Trophies
 
-[![Trophies](https://github-profile-trophy.vercel.app/?username=ashis05&theme=radical&no-frame=true&no-bg=true)](https://github.com/ryo-ma/github-profile-trophy)
+![Trophies](https://github-profile-trophy.vercel.app/?username=ashis05&row=1)
 
 ---
 
