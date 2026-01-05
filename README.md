@@ -51,7 +51,7 @@ I am a passionate technology enthusiast dedicated to building functional web app
 ### 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=ashis05&show_icons=true&theme=radical&count_private=true" height="180" width="450" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=ashis05&show_icons=true&theme=radical&count_private=true" height="180" width="425" alt="GitHub Stats" />
   <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=ashis05&layout=compact&theme=radical" height="180" width="450" alt="Top Languages" />
 </div>
 
