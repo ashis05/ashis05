@@ -1,48 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 2496" role="img" aria-label="Ashis Wadhwani. Software developer. Cloud, DevOps and platform engineering. Mumbai. 1194 GitHub contributions on 170 active days in the last 12 months.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 2472" role="img" aria-label="Ashis Wadhwani. Software developer. Cloud, DevOps and platform engineering. Mumbai. 1194 GitHub contributions on 170 active days in the last 12 months.">
 <style>
-.rise{opacity:0;animation:rise 1.25s cubic-bezier(.2,.7,.2,1) var(--d,0s) forwards}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.cell{opacity:0;animation:fade .8s ease-out var(--d,0s) forwards}
-@keyframes fade{to{opacity:1}}
-.sweep{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);animation:sweep 1.3s cubic-bezier(.3,.7,.2,1) var(--d,0s) forwards}
-@keyframes sweep{to{transform:scaleX(1)}}
-@keyframes sA{0%,100%{transform:translate(0,0) rotate(0deg) scale(1,1)}33%{transform:translate(170px,40px) rotate(5deg) scale(1.18,.86)}66%{transform:translate(-90px,70px) rotate(-4deg) scale(.92,1.22)}}
-@keyframes sB{0%,100%{transform:translate(0,0) rotate(0deg) scale(1.05,1)}40%{transform:translate(-180px,30px) rotate(-6deg) scale(.85,1.15)}75%{transform:translate(110px,-50px) rotate(3deg) scale(1.2,.9)}}
-@keyframes sC{0%,100%{transform:translate(0,0) rotate(0deg) scale(.95,1.05)}30%{transform:translate(120px,-60px) rotate(-5deg) scale(1.15,.9)}70%{transform:translate(-150px,20px) rotate(6deg) scale(.9,1.2)}}
-.sA,.sB,.sC{transform-box:fill-box;transform-origin:center}
-.sA{animation:sA 34s ease-in-out infinite}.sB{animation:sB 41s ease-in-out infinite}.sC{animation:sC 29s ease-in-out infinite}
-.rev{animation-direction:reverse}
-@media (prefers-reduced-motion:reduce){.rise,.cell{animation:none;opacity:1}.sweep{animation:none;transform:none}.sA,.sB,.sC{animation:none}}
-</style>
+    .rise{opacity:0;animation:rise 1.25s cubic-bezier(.2,.7,.2,1) var(--d,0s) forwards}
+    @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    .cell{opacity:0;animation:fade .8s ease-out var(--d,0s) forwards}
+    @keyframes fade{to{opacity:1}}
+    .sweep{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);animation:sweep 1.3s cubic-bezier(.3,.7,.2,1) var(--d,0s) forwards}
+    @keyframes sweep{to{transform:scaleX(1)}}
+    @keyframes sA{0%,100%{transform:translate(0,0) rotate(0deg) scale(1,1)}33%{transform:translate(170px,40px) rotate(5deg) scale(1.18,.86)}66%{transform:translate(-90px,70px) rotate(-4deg) scale(.92,1.22)}}
+    @keyframes sB{0%,100%{transform:translate(0,0) rotate(0deg) scale(1.05,1)}40%{transform:translate(-180px,30px) rotate(-6deg) scale(.85,1.15)}75%{transform:translate(110px,-50px) rotate(3deg) scale(1.2,.9)}}
+    @keyframes sC{0%,100%{transform:translate(0,0) rotate(0deg) scale(.95,1.05)}30%{transform:translate(120px,-60px) rotate(-5deg) scale(1.15,.9)}70%{transform:translate(-150px,20px) rotate(6deg) scale(.9,1.2)}}
+    .sA,.sB,.sC{transform-box:fill-box;transform-origin:center}
+    .sA{animation:sA 34s ease-in-out infinite}.sB{animation:sB 41s ease-in-out infinite}.sC{animation:sC 29s ease-in-out infinite}
+    .rev{animation-direction:reverse}
+    @media (prefers-reduced-motion:reduce){.rise,.cell{animation:none;opacity:1}.sweep{animation:none;transform:none}.sA,.sB,.sC{animation:none}}
+    </style>
 <defs>
-<linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0.000" stop-color="#1d1915"/><stop offset="0.062" stop-color="#1f1b17"/><stop offset="0.125" stop-color="#25211c"/><stop offset="0.188" stop-color="#2e2924"/><stop offset="0.250" stop-color="#3a352e"/><stop offset="0.312" stop-color="#47423a"/><stop offset="0.375" stop-color="#575148"/><stop offset="0.438" stop-color="#676156"/><stop offset="0.500" stop-color="#787266"/><stop offset="0.562" stop-color="#8a8275"/><stop offset="0.625" stop-color="#9a9283"/><stop offset="0.688" stop-color="#aaa191"/><stop offset="0.750" stop-color="#b7ae9d"/><stop offset="0.812" stop-color="#c3baa7"/><stop offset="0.875" stop-color="#ccc2af"/><stop offset="0.938" stop-color="#d2c8b4"/><stop offset="1.000" stop-color="#d4cab6"/></linearGradient>
-<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.000" stop-color="#d4cab6"/><stop offset="0.062" stop-color="#d2c8b4"/><stop offset="0.125" stop-color="#ccc2af"/><stop offset="0.188" stop-color="#c3baa7"/><stop offset="0.250" stop-color="#b7ae9d"/><stop offset="0.312" stop-color="#aaa191"/><stop offset="0.375" stop-color="#9a9283"/><stop offset="0.438" stop-color="#8a8275"/><stop offset="0.500" stop-color="#787266"/><stop offset="0.562" stop-color="#676156"/><stop offset="0.625" stop-color="#575148"/><stop offset="0.688" stop-color="#47423a"/><stop offset="0.750" stop-color="#3a352e"/><stop offset="0.812" stop-color="#2e2924"/><stop offset="0.875" stop-color="#25211c"/><stop offset="0.938" stop-color="#1f1b17"/><stop offset="1.000" stop-color="#1d1915"/></linearGradient>
-<radialGradient id="glowW"><stop offset="0" stop-color="#e0a56a" stop-opacity=".40"/><stop offset=".55" stop-color="#e0a56a" stop-opacity=".14"/><stop offset="1" stop-color="#e0a56a" stop-opacity="0"/></radialGradient>
-<radialGradient id="glowC"><stop offset="0" stop-color="#e9e0d0" stop-opacity=".22"/><stop offset=".55" stop-color="#e9e0d0" stop-opacity=".07"/><stop offset="1" stop-color="#e9e0d0" stop-opacity="0"/></radialGradient>
-<radialGradient id="glowL"><stop offset="0" stop-color="#efe5d0" stop-opacity=".55"/><stop offset=".6" stop-color="#efe5d0" stop-opacity=".16"/><stop offset="1" stop-color="#efe5d0" stop-opacity="0"/></radialGradient>
-<radialGradient id="glowS"><stop offset="0" stop-color="#8f7550" stop-opacity=".30"/><stop offset=".6" stop-color="#8f7550" stop-opacity=".09"/><stop offset="1" stop-color="#8f7550" stop-opacity="0"/></radialGradient>
-<linearGradient id="fH" gradientUnits="userSpaceOnUse" x1="0" y1="310" x2="0" y2="510"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
-<linearGradient id="fM" gradientUnits="userSpaceOnUse" x1="0" y1="520" x2="0" y2="1630"><stop offset="0" stop-color="#000"/><stop offset="0.126" stop-color="#fff"/><stop offset="0.874" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
-<linearGradient id="fF" gradientUnits="userSpaceOnUse" x1="0" y1="1610" x2="0" y2="1810"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
-<mask id="mH" maskUnits="userSpaceOnUse" x="0" y="0" width="960" height="530"><rect width="960" height="530" fill="url(#fH)"/></mask>
-<mask id="mM" maskUnits="userSpaceOnUse" x="0" y="520" width="960" height="1110"><rect y="520" width="960" height="1110" fill="url(#fM)"/></mask>
-<mask id="mF" maskUnits="userSpaceOnUse" x="0" y="1610" width="960" height="4000"><rect y="1610" width="960" height="4000" fill="url(#fF)"/></mask>
-<pattern id="gd" width="48" height="48" patternUnits="userSpaceOnUse">
- <path d="M48 0H0V48" fill="none" stroke="#e9e0d0" stroke-opacity=".045"/></pattern>
-<pattern id="gl" width="48" height="48" patternUnits="userSpaceOnUse">
- <path d="M48 0H0V48" fill="none" stroke="#1d1915" stroke-opacity=".05"/></pattern>
-</defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0.000" stop-color="#1d1915"/><stop offset="0.062" stop-color="#1f1b17"/><stop offset="0.125" stop-color="#25211c"/><stop offset="0.188" stop-color="#2e2924"/><stop offset="0.250" stop-color="#3a352e"/><stop offset="0.312" stop-color="#47423a"/><stop offset="0.375" stop-color="#575148"/><stop offset="0.438" stop-color="#676156"/><stop offset="0.500" stop-color="#787266"/><stop offset="0.562" stop-color="#8a8275"/><stop offset="0.625" stop-color="#9a9283"/><stop offset="0.688" stop-color="#aaa191"/><stop offset="0.750" stop-color="#b7ae9d"/><stop offset="0.812" stop-color="#c3baa7"/><stop offset="0.875" stop-color="#ccc2af"/><stop offset="0.938" stop-color="#d2c8b4"/><stop offset="1.000" stop-color="#d4cab6"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.000" stop-color="#d4cab6"/><stop offset="0.062" stop-color="#d2c8b4"/><stop offset="0.125" stop-color="#ccc2af"/><stop offset="0.188" stop-color="#c3baa7"/><stop offset="0.250" stop-color="#b7ae9d"/><stop offset="0.312" stop-color="#aaa191"/><stop offset="0.375" stop-color="#9a9283"/><stop offset="0.438" stop-color="#8a8275"/><stop offset="0.500" stop-color="#787266"/><stop offset="0.562" stop-color="#676156"/><stop offset="0.625" stop-color="#575148"/><stop offset="0.688" stop-color="#47423a"/><stop offset="0.750" stop-color="#3a352e"/><stop offset="0.812" stop-color="#2e2924"/><stop offset="0.875" stop-color="#25211c"/><stop offset="0.938" stop-color="#1f1b17"/><stop offset="1.000" stop-color="#1d1915"/></linearGradient>
+    <radialGradient id="glowW"><stop offset="0" stop-color="#e0a56a" stop-opacity=".24"/><stop offset=".55" stop-color="#e0a56a" stop-opacity=".08"/><stop offset="1" stop-color="#e0a56a" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowC"><stop offset="0" stop-color="#e9e0d0" stop-opacity=".13"/><stop offset=".55" stop-color="#e9e0d0" stop-opacity=".04"/><stop offset="1" stop-color="#e9e0d0" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowL"><stop offset="0" stop-color="#efe5d0" stop-opacity=".33"/><stop offset=".6" stop-color="#efe5d0" stop-opacity=".10"/><stop offset="1" stop-color="#efe5d0" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowS"><stop offset="0" stop-color="#8f7550" stop-opacity=".18"/><stop offset=".6" stop-color="#8f7550" stop-opacity=".05"/><stop offset="1" stop-color="#8f7550" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fH" gradientUnits="userSpaceOnUse" x1="0" y1="310" x2="0" y2="510"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+    <linearGradient id="fM" gradientUnits="userSpaceOnUse" x1="0" y1="520" x2="0" y2="1630"><stop offset="0" stop-color="#000"/><stop offset="0.126" stop-color="#fff"/><stop offset="0.874" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+    <linearGradient id="fF" gradientUnits="userSpaceOnUse" x1="0" y1="1610" x2="0" y2="1810"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <mask id="mH" maskUnits="userSpaceOnUse" x="0" y="0" width="960" height="530"><rect width="960" height="530" fill="url(#fH)"/></mask>
+    <mask id="mM" maskUnits="userSpaceOnUse" x="0" y="520" width="960" height="1110"><rect y="520" width="960" height="1110" fill="url(#fM)"/></mask>
+    <mask id="mF" maskUnits="userSpaceOnUse" x="0" y="1610" width="960" height="4000"><rect y="1610" width="960" height="4000" fill="url(#fF)"/></mask>
+    <pattern id="gd" width="48" height="48" patternUnits="userSpaceOnUse">
+     <path d="M48 0H0V48" fill="none" stroke="#e9e0d0" stroke-opacity=".045"/></pattern>
+    <pattern id="gl" width="48" height="48" patternUnits="userSpaceOnUse">
+     <path d="M48 0H0V48" fill="none" stroke="#1d1915" stroke-opacity=".05"/></pattern>
+    </defs>
 <rect width="960" height="452" fill="#1d1915"/>
 <rect y="450" width="960" height="152" fill="url(#g1)"/>
 <rect y="600" width="960" height="952" fill="#d4cab6"/>
 <rect y="1550" width="960" height="122" fill="url(#g2)"/>
-<rect y="1670" width="960" height="826" fill="#1d1915"/>
+<rect y="1670" width="960" height="802" fill="#1d1915"/>
 <rect width="960" height="510" fill="url(#gd)"/>
 <rect y="560" width="960" height="1030" fill="url(#gl)"/>
-<rect y="1610" width="960" height="886" fill="url(#gd)"/>
+<rect y="1610" width="960" height="862" fill="url(#gd)"/>
 <path d="M48 0V530M912 0V530" stroke="#e9e0d0" stroke-opacity=".2" stroke-dasharray="3 5" fill="none"/>
 <path d="M48 600V1550M912 600V1550" stroke="#1d1915" stroke-opacity=".22" stroke-dasharray="3 5" fill="none"/>
-<path d="M48 1670V2496M912 1670V2496" stroke="#e9e0d0" stroke-opacity=".2" stroke-dasharray="3 5" fill="none"/>
+<path d="M48 1670V2472M912 1670V2472" stroke="#e9e0d0" stroke-opacity=".2" stroke-dasharray="3 5" fill="none"/>
 <g mask="url(#mH)"><g class="sA"><ellipse cx="250" cy="150" rx="540" ry="150" transform="rotate(-10 250 150)" fill="url(#glowW)"/></g><g class="sB"><ellipse cx="720" cy="300" rx="470" ry="130" transform="rotate(8 720 300)" fill="url(#glowC)"/></g><g class="sC"><ellipse cx="470" cy="70" rx="400" ry="110" transform="rotate(-4 470 70)" fill="url(#glowW)"/></g><g class="sA rev"><ellipse cx="860" cy="130" rx="320" ry="120" transform="rotate(14 860 130)" fill="url(#glowW)"/></g></g>
 <g mask="url(#mM)"><g class="sC"><ellipse cx="680" cy="820" rx="520" ry="170" transform="rotate(-8 680 820)" fill="url(#glowL)"/></g><g class="sA"><ellipse cx="220" cy="1040" rx="460" ry="150" transform="rotate(10 220 1040)" fill="url(#glowS)"/></g><g class="sB rev"><ellipse cx="640" cy="1260" rx="440" ry="140" transform="rotate(-12 640 1260)" fill="url(#glowS)"/></g><g class="sB"><ellipse cx="260" cy="720" rx="420" ry="130" transform="rotate(6 260 720)" fill="url(#glowL)"/></g></g>
 <g mask="url(#mF)"><g class="sB"><ellipse cx="540" cy="1790" rx="520" ry="160" transform="rotate(-9 540 1790)" fill="url(#glowW)"/></g><g class="sC"><ellipse cx="170" cy="2030" rx="420" ry="140" transform="rotate(12 170 2030)" fill="url(#glowC)"/></g><g class="sA rev"><ellipse cx="800" cy="2000" rx="400" ry="130" transform="rotate(-6 800 2000)" fill="url(#glowW)"/></g><g class="sC rev"><ellipse cx="420" cy="2300" rx="460" ry="140" transform="rotate(7 420 2300)" fill="url(#glowW)"/></g></g>
@@ -63,21 +63,13 @@
 <text x="72" y="335" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="19" fill="#d6cdbb">server at home called escanor.</text>
 </g>
 <g class="rise" style="--d:1.05s">
-<text x="72" y="384" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8f877a" letter-spacing="1.6">NOW</text>
-<text x="72" y="410" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#e9e0d0">Software Developer 1</text>
-<text x="72" y="430" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a">BizDateUp Technologies</text>
-<path d="M262 372V432" stroke="#e9e0d0" stroke-opacity=".2"/>
-<text x="276" y="384" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8f877a" letter-spacing="1.6">BASED</text>
-<text x="276" y="410" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#e9e0d0">Mumbai, India</text>
-<text x="276" y="430" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a">open to remote</text>
-<path d="M466 372V432" stroke="#e9e0d0" stroke-opacity=".2"/>
-<text x="480" y="384" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8f877a" letter-spacing="1.6">RUNS</text>
-<text x="480" y="410" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#e9e0d0">AWS in Terraform</text>
-<text x="480" y="430" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a">keyless CI/CD</text>
-<path d="M670 372V432" stroke="#e9e0d0" stroke-opacity=".2"/>
-<text x="684" y="384" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8f877a" letter-spacing="1.6">ESCANOR</text>
-<text x="684" y="410" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#e9e0d0">A home server</text>
-<text x="684" y="430" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a">no public inbound ports</text>
+<text x="72" y="384" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8f877a" letter-spacing="1.6">RUNS</text>
+<text x="72" y="410" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#e9e0d0">AWS in Terraform</text>
+<text x="72" y="430" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a">keyless CI/CD</text>
+<path d="M358 372V432" stroke="#e9e0d0" stroke-opacity=".2"/>
+<text x="372" y="384" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8f877a" letter-spacing="1.6">ESCANOR</text>
+<text x="372" y="410" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#e9e0d0">A home server</text>
+<text x="372" y="430" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a">no public inbound ports</text>
 </g>
 <g class="rise" style="--d:0.30s">
 <path d="M48 650H912" stroke="#1d1915" stroke-opacity="0.28" fill="none"/>
@@ -565,43 +557,36 @@
 <g class="rise" style="--d:4.80s">
 <text x="72" y="2113.7735849056603" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a" letter-spacing="1.6">TROPHIES</text>
 </g>
-<g transform="translate(58 2131.7735849056603)"><g class="rise" style="--d:4.95s">
-<rect width="270" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
+<g transform="translate(58.0 2131.7735849056603)"><g class="rise" style="--d:4.95s">
+<rect width="268" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
 <g transform="translate(16 26) scale(1.25)" fill="none" stroke="#8fdca6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill="#8fdca6" fill-opacity=".18"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20M22 33V40M14 44H30"/></g>
-<text x="88" y="44" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="34" fill="#e9e0d0">1,287</text>
+<text x="88" y="44" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="34" fill="#e9e0d0">1,288</text>
 <text x="88" y="68" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#c2b9a8">Contributions</text>
 <text x="88" y="90" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#8fdca6" letter-spacing="1.4">RANK S</text>
 </g></g>
-<g transform="translate(338 2131.7735849056603)"><g class="rise" style="--d:5.13s">
-<rect width="270" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
+<g transform="translate(336.0 2131.7735849056603)"><g class="rise" style="--d:5.13s">
+<rect width="268" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
 <g transform="translate(16 26) scale(1.25)" fill="none" stroke="#c4ae82" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill="#c4ae82" fill-opacity=".18"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20M22 33V40M14 44H30"/></g>
 <text x="88" y="44" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="34" fill="#e9e0d0">9</text>
 <text x="88" y="68" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#c2b9a8">Longest streak, days</text>
 <text x="88" y="90" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#c4ae82" letter-spacing="1.4">RANK B</text>
 </g></g>
-<g transform="translate(618 2131.7735849056603)"><g class="rise" style="--d:5.31s">
-<rect width="270" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
+<g transform="translate(614.0 2131.7735849056603)"><g class="rise" style="--d:5.31s">
+<rect width="268" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
 <g transform="translate(16 26) scale(1.25)" fill="none" stroke="#dcc58c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill="#dcc58c" fill-opacity=".18"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20M22 33V40M14 44H30"/></g>
 <text x="88" y="44" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="34" fill="#e9e0d0">53</text>
 <text x="88" y="68" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#c2b9a8">Best day</text>
 <text x="88" y="90" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#dcc58c" letter-spacing="1.4">RANK A</text>
 </g></g>
-<g transform="translate(58 2253.7735849056603)"><g class="rise" style="--d:5.49s">
-<rect width="270" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
+<g transform="translate(58.0 2253.7735849056603)"><g class="rise" style="--d:5.49s">
+<rect width="407" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
 <g transform="translate(16 26) scale(1.25)" fill="none" stroke="#dcc58c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill="#dcc58c" fill-opacity=".18"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20M22 33V40M14 44H30"/></g>
 <text x="88" y="44" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="34" fill="#e9e0d0">170</text>
 <text x="88" y="68" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#c2b9a8">Active days, 12 mo</text>
 <text x="88" y="90" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#dcc58c" letter-spacing="1.4">RANK A</text>
 </g></g>
-<g transform="translate(338 2253.7735849056603)"><g class="rise" style="--d:5.67s">
-<rect width="270" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
-<g transform="translate(16 26) scale(1.25)" fill="none" stroke="#9a8f7c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill="#9a8f7c" fill-opacity=".18"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20M22 33V40M14 44H30"/></g>
-<text x="88" y="44" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="34" fill="#e9e0d0">5</text>
-<text x="88" y="68" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#c2b9a8">Followers</text>
-<text x="88" y="90" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#9a8f7c" letter-spacing="1.4">RANK C</text>
-</g></g>
-<g transform="translate(618 2253.7735849056603)"><g class="rise" style="--d:5.85s">
-<rect width="270" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
+<g transform="translate(475.0 2253.7735849056603)"><g class="rise" style="--d:5.67s">
+<rect width="407" height="108" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity=".14"/>
 <g transform="translate(16 26) scale(1.25)" fill="none" stroke="#c4ae82" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill="#c4ae82" fill-opacity=".18"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20M22 33V40M14 44H30"/></g>
 <text x="88" y="44" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="34" fill="#e9e0d0">5</text>
 <text x="88" y="68" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#c2b9a8">Years on GitHub</text>
@@ -609,7 +594,6 @@
 </g></g>
 <g class="rise" style="--d:6.30s">
 <path d="M48 2391.7735849056603H912" stroke="#e9e0d0" stroke-opacity=".22" fill="none"/>
-<text x="72" y="2425.7735849056603" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#c2b9a8" letter-spacing="0.3">ashiswadhwani.in  ·  hello@ashiswadhwani.in  ·  linkedin.com/in/ashis-wadhwani-</text>
-<text x="888" y="2451.7735849056603" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a" text-anchor="end" letter-spacing="1.2">refreshed daily</text>
+<text x="888" y="2425.7735849056603" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8f877a" text-anchor="end" letter-spacing="1.2">refreshed daily</text>
 </g>
 </svg>
