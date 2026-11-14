@@ -131,12 +131,13 @@ add("""<style>
 @keyframes fade{to{opacity:1}}
 .sweep{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);animation:sweep 1.3s cubic-bezier(.3,.7,.2,1) var(--d,0s) forwards}
 @keyframes sweep{to{transform:scaleX(1)}}
-@keyframes driftA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(280px,80px) scale(1.3)}}
-@keyframes driftB{0%,100%{transform:translate(0,0) scale(1.1)}50%{transform:translate(-260px,60px) scale(.85)}}
-@keyframes driftC{0%,100%{transform:translate(0,0) scale(.9)}50%{transform:translate(210px,-80px) scale(1.25)}}
-.dA,.dB,.dC{transform-box:fill-box;transform-origin:center}
-.dA{animation:driftA 24s ease-in-out 8}.dB{animation:driftB 30s ease-in-out 8}.dC{animation:driftC 27s ease-in-out 8}
-@media (prefers-reduced-motion:reduce){.rise,.cell{animation:none;opacity:1}.sweep{animation:none;transform:none}.dA,.dB,.dC{animation:none}}
+@keyframes sA{0%,100%{transform:translate(0,0) rotate(0deg) scale(1,1)}33%{transform:translate(170px,40px) rotate(5deg) scale(1.18,.86)}66%{transform:translate(-90px,70px) rotate(-4deg) scale(.92,1.22)}}
+@keyframes sB{0%,100%{transform:translate(0,0) rotate(0deg) scale(1.05,1)}40%{transform:translate(-180px,30px) rotate(-6deg) scale(.85,1.15)}75%{transform:translate(110px,-50px) rotate(3deg) scale(1.2,.9)}}
+@keyframes sC{0%,100%{transform:translate(0,0) rotate(0deg) scale(.95,1.05)}30%{transform:translate(120px,-60px) rotate(-5deg) scale(1.15,.9)}70%{transform:translate(-150px,20px) rotate(6deg) scale(.9,1.2)}}
+.sA,.sB,.sC{transform-box:fill-box;transform-origin:center}
+.sA{animation:sA 34s ease-in-out infinite}.sB{animation:sB 41s ease-in-out infinite}.sC{animation:sC 29s ease-in-out infinite}
+.rev{animation-direction:reverse}
+@media (prefers-reduced-motion:reduce){.rise,.cell{animation:none;opacity:1}.sweep{animation:none;transform:none}.sA,.sB,.sC{animation:none}}
 </style>""")
 add(f"""<defs>
 <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">{ease_stops(INK, CREAM)}</linearGradient>
@@ -145,9 +146,12 @@ add(f"""<defs>
 <radialGradient id="glowC"><stop offset="0" stop-color="#e9e0d0" stop-opacity=".22"/><stop offset=".55" stop-color="#e9e0d0" stop-opacity=".07"/><stop offset="1" stop-color="#e9e0d0" stop-opacity="0"/></radialGradient>
 <radialGradient id="glowL"><stop offset="0" stop-color="#efe5d0" stop-opacity=".55"/><stop offset=".6" stop-color="#efe5d0" stop-opacity=".16"/><stop offset="1" stop-color="#efe5d0" stop-opacity="0"/></radialGradient>
 <radialGradient id="glowS"><stop offset="0" stop-color="#8f7550" stop-opacity=".30"/><stop offset=".6" stop-color="#8f7550" stop-opacity=".09"/><stop offset="1" stop-color="#8f7550" stop-opacity="0"/></radialGradient>
-<clipPath id="cH"><rect width="{W}" height="{GRAD_Y0}"/></clipPath>
-<clipPath id="cM"><rect y="{GRAD_Y1 - 60}" width="{W}" height="{DARK2_Y0 - GRAD_Y1 + 120}"/></clipPath>
-<clipPath id="cF"><rect y="{DARK2_Y1}" width="{W}" height="4000"/></clipPath>
+<linearGradient id="fH" gradientUnits="userSpaceOnUse" x1="0" y1="{GRAD_Y0 - 140}" x2="0" y2="{GRAD_Y0 + 60}"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+<linearGradient id="fM" gradientUnits="userSpaceOnUse" x1="0" y1="{GRAD_Y1 - 80}" x2="0" y2="{DARK2_Y0 + 80}"><stop offset="0" stop-color="#000"/><stop offset="{140 / (DARK2_Y0 - GRAD_Y1 + 160):.3f}" stop-color="#fff"/><stop offset="{1 - 140 / (DARK2_Y0 - GRAD_Y1 + 160):.3f}" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+<linearGradient id="fF" gradientUnits="userSpaceOnUse" x1="0" y1="{DARK2_Y1 - 60}" x2="0" y2="{DARK2_Y1 + 140}"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>
+<mask id="mH" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{GRAD_Y0 + 80}"><rect width="{W}" height="{GRAD_Y0 + 80}" fill="url(#fH)"/></mask>
+<mask id="mM" maskUnits="userSpaceOnUse" x="0" y="{GRAD_Y1 - 80}" width="{W}" height="{DARK2_Y0 - GRAD_Y1 + 160}"><rect y="{GRAD_Y1 - 80}" width="{W}" height="{DARK2_Y0 - GRAD_Y1 + 160}" fill="url(#fM)"/></mask>
+<mask id="mF" maskUnits="userSpaceOnUse" x="0" y="{DARK2_Y1 - 60}" width="{W}" height="4000"><rect y="{DARK2_Y1 - 60}" width="{W}" height="4000" fill="url(#fF)"/></mask>
 <pattern id="gd" width="48" height="48" patternUnits="userSpaceOnUse">
  <path d="M48 0H0V48" fill="none" stroke="#e9e0d0" stroke-opacity=".045"/></pattern>
 <pattern id="gl" width="48" height="48" patternUnits="userSpaceOnUse">
@@ -168,17 +172,34 @@ add(f'<path d="M{RAIL_L} 0V{GRAD_Y0 + 80}M{RAIL_R} 0V{GRAD_Y0 + 80}" stroke="{LI
 add(f'<path d="M{RAIL_L} {GRAD_Y1}V{DARK2_Y0}M{RAIL_R} {GRAD_Y1}V{DARK2_Y0}" stroke="{INK}" stroke-opacity=".22" stroke-dasharray="3 5" fill="none"/>')
 add(f'<path d="M{RAIL_L} {DARK2_Y1}V{H}M{RAIL_R} {DARK2_Y1}V{H}" stroke="{LIGHT}" stroke-opacity=".2" stroke-dasharray="3 5" fill="none"/>')
 
-# ---- drifting light (slow warm smoke, like the site's background; it settles after several minutes)
-add('<g clip-path="url(#cH)"><g class="dA"><ellipse cx="260" cy="150" rx="450" ry="230" fill="url(#glowW)"/></g>'
-    '<g class="dB"><ellipse cx="780" cy="290" rx="380" ry="200" fill="url(#glowC)"/></g>'
-    '<g class="dC"><ellipse cx="520" cy="60" rx="340" ry="170" fill="url(#glowW)"/></g></g>')
-add('<g clip-path="url(#cM)"><g class="dC"><ellipse cx="700" cy="880" rx="480" ry="260" fill="url(#glowL)"/></g>'
-    '<g class="dA"><ellipse cx="200" cy="1060" rx="420" ry="220" fill="url(#glowS)"/></g>'
-    '<g class="dB"><ellipse cx="620" cy="1240" rx="400" ry="210" fill="url(#glowS)"/></g>'
-    '<g class="dA"><ellipse cx="240" cy="780" rx="400" ry="200" fill="url(#glowL)"/></g></g>')
-add('<g clip-path="url(#cF)"><g class="dB"><ellipse cx="560" cy="1780" rx="470" ry="240" fill="url(#glowW)"/></g>'
-    '<g class="dC"><ellipse cx="150" cy="2020" rx="390" ry="200" fill="url(#glowC)"/></g>'
-    '<g class="dA"><ellipse cx="800" cy="2000" rx="380" ry="190" fill="url(#glowW)"/></g></g>')
+# ---- smoke: long, tilted streaks of warm light that drift, turn and stretch slowly (like the site's
+# background folds). Soft masks fade them out at each band's edge, so no hard line shows.
+
+
+def smoke(cx, cy, rx, ry, tilt, grad, cls, rev=False):
+    r = " rev" if rev else ""
+    return (f'<g class="{cls}{r}"><ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" '
+            f'transform="rotate({tilt} {cx} {cy})" fill="url(#{grad})"/></g>')
+
+
+add('<g mask="url(#mH)">'
+    + smoke(250, 150, 540, 150, -10, "glowW", "sA")
+    + smoke(720, 300, 470, 130, 8, "glowC", "sB")
+    + smoke(470, 70, 400, 110, -4, "glowW", "sC")
+    + smoke(860, 130, 320, 120, 14, "glowW", "sA", True)
+    + '</g>')
+add('<g mask="url(#mM)">'
+    + smoke(680, 820, 520, 170, -8, "glowL", "sC")
+    + smoke(220, 1040, 460, 150, 10, "glowS", "sA")
+    + smoke(640, 1260, 440, 140, -12, "glowS", "sB", True)
+    + smoke(260, 720, 420, 130, 6, "glowL", "sB")
+    + '</g>')
+add('<g mask="url(#mF)">'
+    + smoke(540, 1790, 520, 160, -9, "glowW", "sB")
+    + smoke(170, 2030, 420, 140, 12, "glowC", "sC")
+    + smoke(800, 2000, 400, 130, -6, "glowW", "sA", True)
+    + smoke(420, 2300, 460, 140, 7, "glowW", "sC", True)
+    + '</g>')
 
 # ---- header (dark)
 add(rise(0.0))
