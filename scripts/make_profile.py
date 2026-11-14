@@ -118,8 +118,8 @@ def ease_stops(c0, c1, n=17):
 
 # ---------------------------------------------------------------- layout (y positions, top to bottom)
 H = 2400                           # placeholder, replaced by the real height at the end
-GRAD_Y0, GRAD_Y1 = 450, 600        # dark -> paper
-DARK2_Y0, DARK2_Y1 = 1550, 1670    # paper -> dark
+GRAD_Y0, GRAD_Y1 = 450, 550        # dark -> paper
+DARK2_Y0, DARK2_Y1 = 1470, 1590    # paper -> dark
 
 def frame():
     """Open the SVG and draw what both layouts share: styles, gradients, masks, backgrounds and rails."""
@@ -241,7 +241,7 @@ for i, (k, v, sub) in enumerate(specs):
 add("</g>")
 
 # ---- 01 details (paper)
-y = 650
+y = 570
 label(y, 1, "DETAILS", False)
 items = [("BASED IN", "Mumbai, India", "Open to on-site, hybrid or remote"),
          ("ROLE", "Software Developer 1", "BizDateUp Technologies, since May 2026"),
@@ -263,7 +263,7 @@ for i, (k, v, sub) in enumerate(items):
 add("</g>")
 
 # ---- 02 tools and skills
-y = 1040
+y = 960
 label(y, 2, "TOOLS AND SKILLS", False)
 groups = [("Cloud and infrastructure", ["AWS", "Terraform", "Docker", "Linux", "Cloudflare Tunnel", "Tailscale"], []),
           ("CI/CD", ["GitHub Actions", "OIDC", "Keyless deploys"], []),
@@ -290,7 +290,7 @@ text(LX, wy + 64, "backup restore drills, runbooks and backend services.", 21, I
 add("</g>")
 
 # ---- 03 github (dark)
-y = 1750
+y = 1670
 label(y, 3, "GITHUB · LAST 12 MONTHS", True)
 add(rise(1.4))
 text(LX, y + 112, f"{year_total:,}", 58, LIGHT)
@@ -411,9 +411,9 @@ brief_lines = textwrap.wrap(brief, 46, break_on_hyphens=False)
 y_brief = 152 + 27 * len(tag_lines) + 30
 y_spec = y_brief + 27 * (len(brief_lines) - 1) + 52
 GRAD_Y0 = y_spec + 84
-GRAD_Y1 = GRAD_Y0 + 130
+GRAD_Y1 = GRAD_Y0 + 90
 
-y_det = GRAD_Y1 + 40
+y_det = GRAD_Y1 + 22
 CARD_STEP_M = 100
 end_det = y_det + 84 + (len(items) - 1) * CARD_STEP_M + 64
 
