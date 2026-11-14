@@ -2,8 +2,8 @@
 """Build trophies.svg: a row of rank cards drawn in the portfolio's colours.
 
 Needs GITHUB_TOKEN. Locally: GITHUB_TOKEN=$(gh auth token) python3 scripts/make_trophies.py
-Counts that include private work (contributions, pull requests, repositories) only do so if the
-token can see it, so the workflow uses PROFILE_TOKEN when it is set.
+Every number comes from the contribution calendar or the public profile, so a read-only token
+that cannot see private repositories still gives the same result as a full-access one.
 """
 import json
 import os
@@ -31,8 +31,6 @@ def gql(query, variables=None):
 
 
 base = gql("""query($l:String!){user(login:$l){createdAt followers{totalCount}
-  pullRequests{totalCount}
-  repositories(ownerAffiliations:OWNER,isFork:false,first:100){totalCount nodes{stargazerCount}}
   contributionsCollection{contributionYears}}}""", {"l": LOGIN})["user"]
 
 years = sorted(base["contributionsCollection"]["contributionYears"])
@@ -45,17 +43,21 @@ contribs = sum(v["contributionCalendar"]["totalContributions"] for v in per_year
 
 recent = gql("""query($l:String!){user(login:$l){contributionsCollection{contributionCalendar{weeks{contributionDays{contributionCount}}}}}}""",
              {"l": LOGIN})["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
-active_days = sum(1 for w in recent for d in w["contributionDays"] if d["contributionCount"] > 0)
-repos = base["repositories"]["totalCount"]
+counts = [d["contributionCount"] for w in recent for d in w["contributionDays"]]
+active_days = sum(1 for c in counts if c > 0)
+best_day = max(counts) if counts else 0
+streak = run = 0
+for c in counts:
+    run = run + 1 if c > 0 else 0
+    streak = max(streak, run)
 followers = base["followers"]["totalCount"]
-prs = base["pullRequests"]["totalCount"]
 age = date.today().year - int(base["createdAt"][:4])
 
 # (title, value, thresholds for C, B, A, S)
 METRICS = [
     ("Contributions", contribs, (1, 100, 500, 1000)),
-    ("Pull requests", prs, (1, 10, 50, 200)),
-    ("Repositories", repos, (1, 10, 30, 60)),
+    ("Longest streak, days", streak, (1, 5, 14, 30)),
+    ("Best day", best_day, (1, 10, 30, 60)),
     ("Active days, 12 mo", active_days, (1, 50, 120, 250)),
     ("Followers", followers, (1, 10, 50, 200)),
     ("Years on GitHub", age, (1, 3, 6, 10)),

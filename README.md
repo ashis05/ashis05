@@ -41,5 +41,5 @@ Each one has a write-up with the problem, the architecture and the trade-offs on
 </p>
 
 <p align="center">
-  <img src="trophies.svg" alt="GitHub trophies: contributions, pull requests, repositories, active days, followers and years on GitHub" width="100%">
+  <img src="trophies.svg" alt="GitHub trophies: contributions, longest streak, best day, active days, followers and years on GitHub" width="100%">
 </p>

@@ -7,23 +7,23 @@
 <g transform="translate(84 72)">
 <rect width="162" height="152" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity="0.12"/>
 <g transform="translate(59.0 14)" fill="none" stroke="#8fdca6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill-opacity="0.18" fill="#8fdca6"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20"/><path d="M22 33V40M14 44H30"/></g>
-<text x="81.0" y="86" text-anchor="middle" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="26" fill="#e9e0d0">1,282</text>
+<text x="81.0" y="86" text-anchor="middle" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="26" fill="#e9e0d0">1,283</text>
 <text x="81.0" y="108" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#a39b8d">Contributions</text>
 <text x="81.0" y="134" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="1.4" fill="#8fdca6">RANK S</text>
 </g>
 <g transform="translate(258 72)">
 <rect width="162" height="152" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity="0.12"/>
-<g transform="translate(59.0 14)" fill="none" stroke="#4a443b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill-opacity="0.18" fill="#4a443b"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20"/><path d="M22 33V40M14 44H30"/></g>
-<text x="81.0" y="86" text-anchor="middle" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="26" fill="#e9e0d0">0</text>
-<text x="81.0" y="108" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#a39b8d">Pull requests</text>
-<text x="81.0" y="134" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="1.4" fill="#4a443b">not yet</text>
+<g transform="translate(59.0 14)" fill="none" stroke="#b9a47a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill-opacity="0.18" fill="#b9a47a"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20"/><path d="M22 33V40M14 44H30"/></g>
+<text x="81.0" y="86" text-anchor="middle" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="26" fill="#e9e0d0">9</text>
+<text x="81.0" y="108" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#a39b8d">Longest streak, days</text>
+<text x="81.0" y="134" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="1.4" fill="#b9a47a">RANK B</text>
 </g>
 <g transform="translate(432 72)">
 <rect width="162" height="152" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity="0.12"/>
-<g transform="translate(59.0 14)" fill="none" stroke="#8a7f6e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill-opacity="0.18" fill="#8a7f6e"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20"/><path d="M22 33V40M14 44H30"/></g>
-<text x="81.0" y="86" text-anchor="middle" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="26" fill="#e9e0d0">2</text>
-<text x="81.0" y="108" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#a39b8d">Repositories</text>
-<text x="81.0" y="134" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="1.4" fill="#8a7f6e">RANK C</text>
+<g transform="translate(59.0 14)" fill="none" stroke="#d6bf86" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H34V20C34 28 28 33 22 33C16 33 10 28 10 20Z" fill-opacity="0.18" fill="#d6bf86"/><path d="M10 8H4C4 16 7 19 11 20M34 8H40C40 16 37 19 33 20"/><path d="M22 33V40M14 44H30"/></g>
+<text x="81.0" y="86" text-anchor="middle" font-family="Georgia, 'Times New Roman', 'Liberation Serif', serif" font-size="26" fill="#e9e0d0">53</text>
+<text x="81.0" y="108" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#a39b8d">Best day</text>
+<text x="81.0" y="134" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="1.4" fill="#d6bf86">RANK A</text>
 </g>
 <g transform="translate(606 72)">
 <rect width="162" height="152" rx="8" fill="#26211c" stroke="#e9e0d0" stroke-opacity="0.12"/>
