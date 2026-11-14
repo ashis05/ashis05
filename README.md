@@ -1,62 +1,45 @@
-# Hi there, I'm Ashis Wadhwani 👋
+<p align="center">
+  <a href="https://www.ashiswadhwani.in">
+    <img src="banner.svg" alt="Ashis Wadhwani. Software developer. Cloud, DevOps and platform engineering." width="100%">
+  </a>
+</p>
 
-### 👨‍💻 Software Developer | 🎮 Game Developer | 🔍 QA Specialist
+I'm a software developer at BizDateUp Technologies. I run the company's AWS and on-premise infrastructure, and I write the Python and TypeScript services that sit on top of it. Outside work I build my own projects and look after a small server at home called escanor.
 
-I am a passionate technology enthusiast dedicated to building functional web applications and immersive gaming experiences. With a background in both development and quality assurance, I focus on writing clean, efficient code and delivering bug-free software. I enjoy bridging the gap between creative design and technical implementation.
+## Details
 
----
+- **Based in:** Mumbai, India. Open to on-site, hybrid or remote.
+- **Role:** Software Developer 1, BizDateUp Technologies, since May 2026
+- **Site:** [ashiswadhwani.in](https://www.ashiswadhwani.in)
+- **Email:** [hello@ashiswadhwani.in](mailto:hello@ashiswadhwani.in)
+- **LinkedIn:** [ashis-wadhwani-](https://www.linkedin.com/in/ashis-wadhwani-/)
 
-### 🚀 About Me
+## Tools and skills
 
-- 📍 **Based in:** Mumbai, India
-- 💼 **Currently working on:** A real-time collaborative Markdown editor & enhancing game mechanics in Unreal/Unity.
-- 🌱 **Currently learning:** Advanced Linux system architecture (Manjaro) & Performance Optimization.
-- 👯 **Open to collaborating on:** Open-source game tools, Hackathons, and Full-Stack Web Projects.
-- 💬 **Ask me about:** Backend logic, Game Physics, and Quality Assurance testing.
-- 📫 **Contact me at:** wadhwani.ashis@gmail.com
-- 🌐 **Portfolio:** https://www.ashiswadhwani.in/
+**Cloud and infrastructure:** `AWS` `Terraform` `Docker` `Linux` `Cloudflare Tunnel` `Tailscale`
 
----
+**CI/CD:** `GitHub Actions` `OIDC` keyless deploys
 
-### 🛠️ Languages and Tools
+**Monitoring:** `Prometheus` `Grafana` `Loki` `Alertmanager`
 
-**Languages**
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![Bash Script](https://img.shields.io/badge/GNU%20Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+**Languages:** `Python` `TypeScript` `JavaScript` `SQL` `Bash`, and some `Java`, `C`, `C++` and `C#`
 
-**Web Development (PERN & Spring)**
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+**What I do:** infrastructure as code, least-privilege access, monitoring and alerting, backup restore drills, runbooks, backend services
 
-**Game Development**
-![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white)
-![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
+## Things I've built
 
-**Tools & OS**
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+- **[Vulcan](https://www.ashiswadhwani.in/projects/vulcan)** is an AI fitness app that turns a photo of a meal into a calorie entry. It runs on AWS and I built it on my own.
+- **[Text-to-CAD](https://www.ashiswadhwani.in/projects/text-to-cad)** has an LLM write CAD code instead of a mesh, so the part has exact dimensions, resizes with sliders and exports to STEP and STL.
+- **[Manga Translator](https://github.com/ashis05/manga-translator-ai)** is a browser extension that translates manga on any page. The models run on my own GPU.
 
----
+Each one has a write-up with the problem, the architecture and the trade-offs on [my site](https://www.ashiswadhwani.in/projects).
 
-### 📊 GitHub Stats
+## GitHub
 
-<div align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=ashis05&show_icons=true&theme=radical&count_private=true" height="180" width="400" alt="GitHub Stats" />
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=ashis05&layout=compact&theme=radical" height="180" width="425" alt="Top Languages" />
-</div>
+<p align="center">
+  <img src="stats.svg" alt="GitHub contributions in the last 12 months" width="100%">
+</p>
 
----
-
-<div align="center">
- <i>Let's connect and build something amazing together!</i>
-</div>
+<p align="center">
+  <img src="trophies.svg" alt="GitHub trophies: contributions, pull requests, repositories, active days, followers and years on GitHub" width="100%">
+</p>
