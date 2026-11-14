@@ -62,16 +62,15 @@ followers = base["followers"]["totalCount"]
 age = date.today().year - int(base["createdAt"][:4])
 
 # ---------------------------------------------------------------- style
-INK, MUTED = "#1d1915", "#5d564a"
-CREAM, CARD = "#e9e0d0", "#e0d6c4"
+INK, MUTED = "#1d1915", "#4b453b"
+CREAM, CARD = "#d4cab6", "#c9bfaa"
 LIGHT, LIGHT_MUTED, LIGHT_DIM = "#e9e0d0", "#b7ae9d", "#7d766a"
 SERIF = "Georgia, 'Times New Roman', 'Liberation Serif', serif"
 MONO = "ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace"
 W = 1200
 LX, RX = 84, 1116  # content edges
-FRAMES = 90                       # globe frames per turn
+FRAMES = 144                      # globe frames per turn
 TURN_S = 2 * math.pi / 0.16       # the site's globe turns at 0.16 rad/s, so one turn takes about 39 s
-HOLD = 100 / FRAMES * 1.3         # each frame stays up a little longer than its slot, so frames overlap and never flicker
 TS = 1.5  # slows every entrance down, so the page settles over a few seconds like the site
 
 
@@ -107,26 +106,25 @@ def label(y, n, name, dark):
 # ---------------------------------------------------------------- layout
 H = 2210
 GRAD_Y0, GRAD_Y1 = 430, 600       # dark -> cream
-DARK2_Y0, DARK2_Y1 = 1510, 1630   # cream -> dark
+DARK2_Y0, DARK2_Y1 = 1290, 1410   # cream -> dark
 
 add(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" '
     f'aria-label="Ashis Wadhwani. Software developer. Cloud, DevOps and platform engineering. Mumbai. '
     f'{year_total} GitHub contributions on {active_days} active days in the last 12 months.">')
-add(("""<style>
+add("""<style>
 .rise{opacity:0;animation:rise 1.25s cubic-bezier(.2,.7,.2,1) var(--d,0s) forwards}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .cell{opacity:0;animation:fade .8s ease-out var(--d,0s) forwards}
 @keyframes fade{to{opacity:1}}
 .sweep{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);animation:sweep 1.3s cubic-bezier(.3,.7,.2,1) var(--d,0s) forwards}
 @keyframes sweep{to{transform:scaleX(1)}}
-@keyframes driftA{0%,100%{transform:translate(0,0)}50%{transform:translate(240px,70px)}}
-@keyframes driftB{0%,100%{transform:translate(0,0)}50%{transform:translate(-220px,50px)}}
-@keyframes driftC{0%,100%{transform:translate(0,0)}50%{transform:translate(180px,-60px)}}
-.dA{animation:driftA 28s ease-in-out 3}.dB{animation:driftB 34s ease-in-out 3}.dC{animation:driftC 31s ease-in-out 3}
-.gf{opacity:0;animation:gf __T__ linear infinite;animation-delay:var(--d)}
-@keyframes gf{0%{opacity:1}__HOLD__{opacity:1}__HOLD2__{opacity:0}100%{opacity:0}}
-@media (prefers-reduced-motion:reduce){.rise,.cell{animation:none;opacity:1}.sweep{animation:none;transform:none}.dA,.dB,.dC{animation:none}.gf{animation:none}.gf0{opacity:1}}
-</style>""").replace("__T__", f"{TURN_S:.2f}s").replace("__HOLD__", f"{HOLD:.3f}%").replace("__HOLD2__", f"{HOLD + 0.01:.3f}%"))
+@keyframes driftA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(340px,90px) scale(1.3)}}
+@keyframes driftB{0%,100%{transform:translate(0,0) scale(1.1)}50%{transform:translate(-320px,70px) scale(.85)}}
+@keyframes driftC{0%,100%{transform:translate(0,0) scale(.9)}50%{transform:translate(260px,-90px) scale(1.25)}}
+.dA,.dB,.dC{transform-box:fill-box;transform-origin:center}
+.dA{animation:driftA 24s ease-in-out 8}.dB{animation:driftB 30s ease-in-out 8}.dC{animation:driftC 27s ease-in-out 8}
+@media (prefers-reduced-motion:reduce){.rise,.cell{animation:none;opacity:1}.sweep{animation:none;transform:none}.dA,.dB,.dC{animation:none}}
+</style>""")
 def ease_stops(c0, c1, n=17):
     """Eased fade between two colours, like the site's long gradients."""
     r0, r1 = [int(c0[i:i + 2], 16) for i in (1, 3, 5)], [int(c1[i:i + 2], 16) for i in (1, 3, 5)]
@@ -142,11 +140,12 @@ def ease_stops(c0, c1, n=17):
 add(f"""<defs>
 <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">{ease_stops(INK, CREAM)}</linearGradient>
 <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">{ease_stops(CREAM, INK)}</linearGradient>
-<radialGradient id="glowW"><stop offset="0" stop-color="#d9a066" stop-opacity=".20"/><stop offset="1" stop-color="#d9a066" stop-opacity="0"/></radialGradient>
-<radialGradient id="glowC"><stop offset="0" stop-color="#e9e0d0" stop-opacity=".11"/><stop offset="1" stop-color="#e9e0d0" stop-opacity="0"/></radialGradient>
-<radialGradient id="glowL"><stop offset="0" stop-color="#fff6e0" stop-opacity=".75"/><stop offset="1" stop-color="#fff6e0" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowW"><stop offset="0" stop-color="#e0a56a" stop-opacity=".40"/><stop offset=".55" stop-color="#e0a56a" stop-opacity=".14"/><stop offset="1" stop-color="#e0a56a" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowC"><stop offset="0" stop-color="#e9e0d0" stop-opacity=".22"/><stop offset=".55" stop-color="#e9e0d0" stop-opacity=".07"/><stop offset="1" stop-color="#e9e0d0" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowL"><stop offset="0" stop-color="#efe5d0" stop-opacity=".55"/><stop offset=".6" stop-color="#efe5d0" stop-opacity=".16"/><stop offset="1" stop-color="#efe5d0" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowS"><stop offset="0" stop-color="#8f7550" stop-opacity=".30"/><stop offset=".6" stop-color="#8f7550" stop-opacity=".09"/><stop offset="1" stop-color="#8f7550" stop-opacity="0"/></radialGradient>
 <clipPath id="cH"><rect width="{W}" height="{GRAD_Y0}"/></clipPath>
-<clipPath id="cM"><rect y="{GRAD_Y1}" width="{W}" height="{DARK2_Y0 - GRAD_Y1}"/></clipPath>
+<clipPath id="cM"><rect y="{GRAD_Y1 - 60}" width="{W}" height="{DARK2_Y0 - GRAD_Y1 + 120}"/></clipPath>
 <clipPath id="cF"><rect y="{DARK2_Y1}" width="{W}" height="4000"/></clipPath>
 <pattern id="gd" width="48" height="48" patternUnits="userSpaceOnUse">
  <path d="M48 0H0V48" fill="none" stroke="#e9e0d0" stroke-opacity=".045"/></pattern>
@@ -155,10 +154,10 @@ add(f"""<defs>
 </defs>""")
 
 # backgrounds
-add(f'<rect width="{W}" height="{GRAD_Y0}" fill="{INK}"/>')
-add(f'<rect y="{GRAD_Y0}" width="{W}" height="{GRAD_Y1 - GRAD_Y0}" fill="url(#g1)"/>')
-add(f'<rect y="{GRAD_Y1}" width="{W}" height="{DARK2_Y0 - GRAD_Y1}" fill="{CREAM}"/>')
-add(f'<rect y="{DARK2_Y0}" width="{W}" height="{DARK2_Y1 - DARK2_Y0}" fill="url(#g2)"/>')
+add(f'<rect width="{W}" height="{GRAD_Y0 + 2}" fill="{INK}"/>')
+add(f'<rect y="{GRAD_Y0}" width="{W}" height="{GRAD_Y1 - GRAD_Y0 + 2}" fill="url(#g1)"/>')
+add(f'<rect y="{GRAD_Y1}" width="{W}" height="{DARK2_Y0 - GRAD_Y1 + 2}" fill="{CREAM}"/>')
+add(f'<rect y="{DARK2_Y0}" width="{W}" height="{DARK2_Y1 - DARK2_Y0 + 2}" fill="url(#g2)"/>')
 add(f'<rect y="{DARK2_Y1}" width="{W}" height="{H - DARK2_Y1}" fill="{INK}"/>')
 add(f'<rect width="{W}" height="{GRAD_Y0 + 60}" fill="url(#gd)"/>')
 add(f'<rect y="{GRAD_Y1 - 40}" width="{W}" height="{DARK2_Y0 - GRAD_Y1 + 80}" fill="url(#gl)"/>')
@@ -168,13 +167,17 @@ add(f'<path d="M60 0V{GRAD_Y0 + 80}M1140 0V{GRAD_Y0 + 80}" stroke="{LIGHT}" stro
 add(f'<path d="M60 {GRAD_Y1}V{DARK2_Y0}M1140 {GRAD_Y1}V{DARK2_Y0}" stroke="{INK}" stroke-opacity=".22" stroke-dasharray="3 5" fill="none"/>')
 add(f'<path d="M60 {DARK2_Y1}V{H}M1140 {DARK2_Y1}V{H}" stroke="{LIGHT}" stroke-opacity=".2" stroke-dasharray="3 5" fill="none"/>')
 
-# ---- drifting light (slow warm folds, like the site's background; it settles after about 80 s)
-add('<g clip-path="url(#cH)"><g class="dA"><ellipse cx="380" cy="150" rx="520" ry="250" fill="url(#glowW)"/></g>'
-    '<g class="dB"><ellipse cx="980" cy="330" rx="430" ry="210" fill="url(#glowC)"/></g></g>')
-add('<g clip-path="url(#cM)"><g class="dC"><ellipse cx="860" cy="1010" rx="560" ry="300" fill="url(#glowL)"/></g>'
-    '<g class="dA"><ellipse cx="260" cy="1330" rx="480" ry="260" fill="url(#glowL)"/></g></g>')
-add('<g clip-path="url(#cF)"><g class="dB"><ellipse cx="720" cy="1930" rx="540" ry="260" fill="url(#glowW)"/></g>'
-    '<g class="dC"><ellipse cx="200" cy="2180" rx="460" ry="220" fill="url(#glowC)"/></g></g>')
+# ---- drifting light (slow warm smoke, like the site's background; it settles after several minutes)
+add('<g clip-path="url(#cH)"><g class="dA"><ellipse cx="300" cy="160" rx="560" ry="280" fill="url(#glowW)"/></g>'
+    '<g class="dB"><ellipse cx="1000" cy="300" rx="460" ry="240" fill="url(#glowC)"/></g>'
+    '<g class="dC"><ellipse cx="640" cy="60" rx="420" ry="200" fill="url(#glowW)"/></g></g>')
+add('<g clip-path="url(#cM)"><g class="dC"><ellipse cx="880" cy="1010" rx="600" ry="320" fill="url(#glowL)"/></g>'
+    '<g class="dA"><ellipse cx="240" cy="1040" rx="520" ry="240" fill="url(#glowS)"/></g>'
+    '<g class="dB"><ellipse cx="760" cy="1000" rx="460" ry="240" fill="url(#glowS)"/></g>'
+    '<g class="dA"><ellipse cx="300" cy="840" rx="480" ry="240" fill="url(#glowL)"/></g></g>')
+add('<g clip-path="url(#cF)"><g class="dB"><ellipse cx="700" cy="1720" rx="580" ry="280" fill="url(#glowW)"/></g>'
+    '<g class="dC"><ellipse cx="180" cy="1960" rx="480" ry="240" fill="url(#glowC)"/></g>'
+    '<g class="dA"><ellipse cx="1000" cy="1880" rx="460" ry="230" fill="url(#glowW)"/></g></g>')
 
 # ---- header (dark)
 add(rise(0.0))
@@ -220,24 +223,36 @@ def project(la, lo, rot):
     return X, Y * math.cos(TILT) - Z * math.sin(TILT), Y * math.sin(TILT) + Z * math.cos(TILT)
 
 
-add(rise(0.6))
-add(f'<circle cx="{GCX}" cy="{GCY}" r="{GR}" fill="none" stroke="{LIGHT}" stroke-opacity=".18"/>')
+BANDS = [(0.03, 1.2, .22), (0.17, 1.55, .38), (0.34, 1.9, .55), (0.51, 2.25, .72), (0.68, 2.55, .86), (0.85, 2.8, .96)]
+frames_d = [[[] for _ in BANDS] for _ in range(FRAMES)]
+mum = []
 for f in range(FRAMES):
     rot = -MUM[1] - 0.6 + 2 * math.pi * f / FRAMES
-    layers = [[], [], []]
     for la, lo in dots:
         X, Y, Z = project(la, lo, rot)
-        if Z <= 0.03:
+        if Z <= BANDS[0][0]:
             continue
-        layers[0 if Z < .33 else 1 if Z < .66 else 2].append(f"M{GCX + X * GR:.1f} {GCY - Y * GR:.1f}h0")
-    add(f'<g class="gf gf{f}" style="--d:{f * TURN_S / FRAMES:.2f}s">')
-    for d, (w_, op) in zip(layers, [(1.5, .35), (2.0, .6), (2.6, .9)]):
-        add(f'<path d="{"".join(d)}" stroke="{LIGHT}" stroke-opacity="{op}" stroke-width="{w_}" stroke-linecap="round" fill="none"/>')
+        bi = max(i for i, b_ in enumerate(BANDS) if Z >= b_[0])
+        frames_d[f][bi].append(f"M{GCX + X * GR:.1f} {GCY - Y * GR:.1f}h0")
     mx, my, mz = project(MUM[0], MUM[1], rot)
-    if mz > 0:
-        add(f'<circle cx="{GCX + mx * GR:.1f}" cy="{GCY - my * GR:.1f}" r="3.4" fill="#e5645a"/>'
-            f'<circle cx="{GCX + mx * GR:.1f}" cy="{GCY - my * GR:.1f}" r="7" fill="none" stroke="#e5645a" stroke-opacity=".55"/>')
-    add("</g>")
+    mum.append((GCX + mx * GR, GCY - my * GR, 1 if mz > 0.05 else 0))
+
+DUR = f"{TURN_S:.2f}s"
+add(rise(0.6))
+add(f'<circle cx="{GCX}" cy="{GCY}" r="{GR}" fill="none" stroke="{LIGHT}" stroke-opacity=".18"/>')
+for bi, (_, w_, op) in enumerate(BANDS):
+    vals = ";".join("".join(frames_d[f][bi]) or "M0 0" for f in range(FRAMES))
+    first = "".join(frames_d[0][bi]) or "M0 0"
+    add(f'<path d="{first}" stroke="{LIGHT}" stroke-opacity="{op}" stroke-width="{w_}" stroke-linecap="round" fill="none">'
+        f'<animate attributeName="d" dur="{DUR}" repeatCount="indefinite" calcMode="discrete" values="{vals}"/></path>')
+cxs = ";".join(f"{m[0]:.1f}" for m in mum)
+cys = ";".join(f"{m[1]:.1f}" for m in mum)
+ops = ";".join(str(m[2]) for m in mum)
+for r_, extra in ((3.4, 'fill="#e5645a"'), (7, 'fill="none" stroke="#e5645a" stroke-opacity=".55"')):
+    add(f'<circle cx="{mum[0][0]:.1f}" cy="{mum[0][1]:.1f}" r="{r_}" {extra} opacity="{mum[0][2]}">'
+        f'<animate attributeName="cx" dur="{DUR}" repeatCount="indefinite" calcMode="discrete" values="{cxs}"/>'
+        f'<animate attributeName="cy" dur="{DUR}" repeatCount="indefinite" calcMode="discrete" values="{cys}"/>'
+        f'<animate attributeName="opacity" dur="{DUR}" repeatCount="indefinite" calcMode="discrete" values="{ops}"/></circle>')
 add("</g>")
 
 brief = ("I'm a software developer at BizDateUp Technologies. I run the company's AWS and on-premise "
@@ -309,26 +324,9 @@ text(330, y + 76 + 4 * 56 + 10, "Infrastructure as code, least-privilege access,
 text(330, y + 76 + 4 * 56 + 36, "backup restore drills, runbooks and backend services.", 18, INK)
 add("</g>")
 
-# ---- 03 things I've built
-y = 1270
-label(y, 3, "THINGS I'VE BUILT", False)
-built = [("P1 · 2026", "Vulcan", "An AI fitness app that turns a photo of a meal into a calorie entry."),
-         ("P2 · 2026", "Text-to-CAD", "Describe a part in plain English and get exact solid geometry."),
-         ("P3 · 2026", "Manga Translator", "A Chrome extension that translates manga pages in place.")]
-add(rise(1.3))
-for i, (k, name, desc) in enumerate(built):
-    cx = LX + i * 354
-    cy = y + 62
-    add(f'<rect x="{cx - 14}" y="{cy}" width="338" height="150" rx="8" fill="{CARD}" fill-opacity=".7" stroke="{INK}" stroke-opacity=".1"/>')
-    text(cx, cy + 30, k, 11, MUTED, MONO, spacing=1.6)
-    text(cx, cy + 66, name, 28, INK)
-    for j, line in enumerate(textwrap.wrap(desc, 36)):
-        text(cx, cy + 96 + j * 20, line, 14, MUTED)
-add("</g>")
-
-# ---- 04 github (dark)
-y = 1700
-label(y, 4, "GITHUB · LAST 12 MONTHS", True)
+# ---- 03 github (dark)
+y = 1480
+label(y, 3, "GITHUB · LAST 12 MONTHS", True)
 add(rise(1.4))
 text(LX, y + 100, f"{year_total:,}", 52, LIGHT)
 text(LX + 176, y + 100, f"{active_days}", 52, LIGHT)
